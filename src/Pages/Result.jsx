@@ -11,6 +11,10 @@ const Result = ({ user, score }) => {
             navigatoe("/")
         }
     }, [user])
+
+    const handleHome = ()=>{
+        navigatoe("/")
+    }
     return (
         <>
             <div className='bg-gray-200 min-h-screen w-full'>
@@ -22,6 +26,7 @@ const Result = ({ user, score }) => {
                         <p className='text-2xl font-bold bg-gradient-to-r from-amber-500 via-pink-500 to-purple-600 bg-clip-text text-transparent'>Hello <span className='text-xl bg-gradient-to-r from-amber-500 via-pink-500 to-purple-600 bg-clip-text text-transparent' style={{ textTransform: "uppercase" }}>{user}</span></p>
                         <p className='text-2xl text-green-500 font-bold'>Congratulations! 🏆⭐</p>
                         <p className='text-xl font-medium'>You've Scored <span className='text-green-500'>+{score}</span> points</p>
+                        <p onClick={handleHome} className='cursor-pointer' >🡄 Back to home</p>
                     </div>
                 </div>
             </div>
